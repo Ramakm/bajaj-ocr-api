@@ -10,7 +10,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="Finance OCR API", description="Extracts data from invoices")
+app = FastAPI(title="Bajaj OCR API", description="Extracts data from invoices")
 
 @app.post("/extract", response_model=ExtractionResponse)
 async def extract_data(file: UploadFile = File(...)):
@@ -97,4 +97,4 @@ async def extract_data(file: UploadFile = File(...)):
 
 @app.get("/")
 def read_root():
-    return {"message": "Finance OCR API is running"}
+    return {"message": "Bajaj OCR API is running"}
